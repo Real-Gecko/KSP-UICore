@@ -105,8 +105,8 @@ namespace UICore
 		private Texture2D LoadTexture (string filename)
 		{
 			byte [] bytes = System.IO.File.ReadAllBytes (texturesPath + "/" + filename);
-			Texture2D texture = new Texture2D (0, 0);
-			texture.LoadImage (bytes);
+			Texture2D texture = new Texture2D (2, 2);
+            ImageConversion.LoadImage(texture, bytes);
 			return texture;
 		}
 
